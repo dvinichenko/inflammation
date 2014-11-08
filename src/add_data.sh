@@ -1,8 +1,14 @@
 #!/bin/bash
 
-#echo "First argument - " $1 
-#echo "Second argument - " $2
-
 DRUG=$(python assign_drug.py $2)
+DEST="../data/$1/$1-$DRUG.dat"
+mkdir -p ../data/$1
 
-echo "cp $2 ./data/$1/$1-$DRUG.dat"
+cp $2 $DEST
+
+# Add and commit to git repo
+
+MSG="Acquired $DEST"
+git add $DEST
+git commit -m "'$MSG'"
+echo "Finished gracefully with adding $DEST"
