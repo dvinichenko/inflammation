@@ -4,7 +4,7 @@ DRUG=$(python assign_drug.py $2)
 DEST="../data/$1/$1-$DRUG.dat"
 mkdir -p ../data/$1
 
-cp $2 $DEST
+mv $2 $DEST
 
 # Add and commit to git repo
 
