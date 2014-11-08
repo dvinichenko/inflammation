@@ -6,3 +6,12 @@ def assign_drug(_fname):
     else:
         result = "placebo"
     return result
+
+import sys
+
+filename = sys.argv[1]
+
+print filename
+
+assert( assign_drug('inflammation_1.dat') == 'tylenol' )
+
