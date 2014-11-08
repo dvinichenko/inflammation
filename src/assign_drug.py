@@ -11,7 +11,7 @@ import sys
 
 filename = sys.argv[1]
 
-print filename
+print assign_drug(filename)
 
 assert( assign_drug('inflammation_1.dat') == 'tylenol' )
 
